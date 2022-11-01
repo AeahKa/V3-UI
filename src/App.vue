@@ -1,16 +1,11 @@
 <template>
-  <div>
-    hi
-  </div>
+  <div>导航 | <RouterLink to="/">New</RouterLink> | <RouterLink to="xxx">New2</RouterLink></div>
+  <hr/>
+  <RouterView/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
