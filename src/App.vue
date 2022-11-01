@@ -1,11 +1,15 @@
 <template>
-  <div>导航 | <RouterLink to="/">New</RouterLink> | <RouterLink to="xxx">New2</RouterLink></div>
+  <TopNav/>
   <hr/>
   <RouterView/>
 </template>
 
-<script>
+<script lang="ts">
+import TopNav from './components/TopNav.vue'
 export default {
   name: 'App',
+  components:{
+    TopNav
+  }
 }
 </script>
