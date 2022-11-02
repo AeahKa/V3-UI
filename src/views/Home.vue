@@ -4,14 +4,16 @@
     <h2>一个嘴臭的框架</h2>
     <p class="actions">
       <a href="">GitHub</a>
-      <a href="">开始</a>
+      <RouterLink to="/doc">开始</RouterLink>
     </p>
   </div>
 </template>
 
 <script lang="ts">
-export default {
+import { RouterLink } from 'vue-router';
 
+export default {
+  components: { RouterLink }
 }
 </script>
 
