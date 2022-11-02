@@ -1,7 +1,8 @@
+import { inject, ref } from 'vue';
 <template>
   <div class="doc">
     <div class="content">
-      <aside>
+      <aside v-if="asideVisible">
         <h2>组件列表</h2>
         <ol>
           <li>
@@ -24,8 +25,13 @@
 </template>
 
 <script lang="ts">
-export default {
+import { inject, Ref } from 'vue';
 
+export default {
+  setup() {
+    const asideVisible = inject<Ref<boolean>>('asideVisible')
+    return { asideVisible }
+  }
 }
 </script>
 
@@ -38,7 +44,7 @@ aside {
   top: 0;
   left: 0;
   z-index: -1;
-  padding-top: 50px;
+  padding-top: 66px;
 
   >h2 {
     margin-top: 4px;
