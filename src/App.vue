@@ -1,14 +1,14 @@
 <template>
-  <TopNav/>
-  <hr/>
-  <RouterView/>
+  <TopNav />
+  <hr />
+  <RouterView />
 </template>
 
 <script lang="ts">
 import TopNav from './components/TopNav.vue'
 export default {
   name: 'App',
-  components:{
+  components: {
     TopNav
   }
 }

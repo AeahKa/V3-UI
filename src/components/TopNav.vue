@@ -9,27 +9,30 @@
 </template>
 
 <script lang="ts">
-  export default {
-    
-  }
+export default {
+
+}
 </script>
 
 <style lang="scss" scoped>
-  .topNav{
-    background: rgba(0, 128, 0, 0.616);
-    display: flex;
-    padding: 16px;
-    >.logo{
-      max-width: 6em;
-      margin-right: auto;
-    }
+.topNav {
+  background: rgb(102, 174, 102);
+  display: flex;
+  padding: 16px;
+
+  >.logo {
+    max-width: 6em;
+    margin-right: auto;
   }
-  .menu{
-    display: flex;
-    white-space: nowrap;
-    flex-wrap: nowrap;
-    >li{
-      margin:0 1em;
-    }
+}
+
+.menu {
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+
+  >li {
+    margin: 0 1em;
   }
+}
 </style>

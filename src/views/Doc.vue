@@ -37,6 +37,8 @@ aside {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: -1;
+  padding-top: 50px;
 
   >h2 {
     margin-top: 4px;
