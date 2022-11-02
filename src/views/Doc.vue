@@ -19,7 +19,9 @@ import { inject, ref } from 'vue';
           </li>
         </ol>
       </aside>
-      <main>主内容</main>
+      <main>
+        <RouterView />
+      </main>
     </div>
   </div>
 </template>
