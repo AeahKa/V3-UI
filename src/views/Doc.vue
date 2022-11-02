@@ -44,31 +44,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-aside {
-  background: lightblue;
-  width: 150px;
-  padding: 16px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 66px;
+.content {
+  display: flex;
 
-  >h2 {
-    margin-top: 4px;
+  >aside {
+    background: lightblue;
+    width: 150px;
+    padding: 16px;
+    height: 100vh;
 
-  }
+    >h2 {
+      margin-top: 4px;
 
-  >ol {
-    >li {
-      padding: 4px 0;
+    }
+
+    >ol {
+      >li {
+        padding: 4px 0;
+      }
+    }
+
+    @media(max-width:800px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 66px;
     }
   }
 
-  @media(max-width:800px) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 66px;
+  >main {
+    padding: 16px;
   }
 }
 </style>

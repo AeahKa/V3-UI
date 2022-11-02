@@ -1,13 +1,16 @@
 <template>
   <Layout>
-    <div class="banner">
-      <h1>V3-UI</h1>
-      <h2>一个嘴臭的框架</h2>
-      <p class="actions">
-        <a href="">GitHub</a>
-        <RouterLink to="/doc">开始</RouterLink>
-      </p>
+    <div class="home">
+      <div class="banner">
+        <h1>V3-UI</h1>
+        <h2>一个嘴臭的框架</h2>
+        <p class="actions">
+          <a href="">GitHub</a>
+          <RouterLink to="/doc">开始</RouterLink>
+        </p>
+      </div>
     </div>
+
   </Layout>
 
 </template>
@@ -23,10 +26,8 @@ export default {
 
 <style lang="scss" scoped>
 .banner {
-  padding: 100px 0;
   display: flex;
-  display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   background: lightgreen;

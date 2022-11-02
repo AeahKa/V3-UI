@@ -29,11 +29,7 @@ export default {
 
   >.content {
     flex-grow: 1;
-    padding-left: 156px;
-
-    @media(max-width:800px) {
-      padding-left: 0;
-    }
+    overflow: auto;
   }
 }
 </style>
