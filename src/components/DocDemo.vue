@@ -1,5 +1,5 @@
 <template>
-  <div>switch</div>
+  <div>Doc初始页面</div>
 </template>
 
 <script lang="ts">

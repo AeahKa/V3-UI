@@ -1,5 +1,5 @@
 <template>
-  <div>switch</div>
+  <div>dialog</div>
 </template>
 
 <script lang="ts">
