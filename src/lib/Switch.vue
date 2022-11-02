@@ -1,21 +1,21 @@
 <template>
-  <button :class="{ checked:  value }" @click="toggle">
+  <button class="vSwitch" :class="{ 'vChecked': value }" @click="toggle">
     <span></span>
   </button>
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
+
 export default {
   props: {
     value: Boolean
   },
   setup(props, context) {
-    const checked = ref(false)
+
     const toggle = () => {
       context.emit("update:value", !props.value)
     }
-    return { checked, toggle }
+    return { toggle }
   }
 }
 </script>
@@ -25,35 +25,37 @@ $h: 22px;
 
 $h2: $h - 4px;
 
-button {
+.vSwitch {
   height: $h;
   width: calc($h * 2);
   border: none;
   background: gray;
   border-radius: calc($h / 2);
   position: relative;
+
+  >span {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: $h2;
+    width: $h2;
+    background: white;
+    border-radius: calc($h2 / 2);
+    transition: left 250ms;
+  }
 }
 
-span {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  height: $h2;
-  width: $h2;
-  background: white;
-  border-radius: calc($h2 / 2);
-  transition: left 250ms;
-}
 
-button.checked {
+
+.vSwitch.vChecked {
   background: rgb(0, 215, 0);
 }
 
-button.checked>span {
+.vSwitch.vChecked>span {
   left: calc(100% - #{$h2} - 2px);
 }
 
-button:focus {
+.vSwitch:focus {
   outline: none;
 }
 </style>

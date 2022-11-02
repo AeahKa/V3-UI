@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Switch v-model:value='checked' />
+    <Switch v-model:value='vChecked' />
   </div>
 </template>
 
@@ -10,8 +10,8 @@ import { ref } from 'vue';
 export default {
   components: { Switch },
   setup() {
-    const checked = ref(true)
-    return { checked }
+    const vChecked = ref(true)
+    return { vChecked }
   }
 }
 </script>
