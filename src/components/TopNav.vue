@@ -1,6 +1,7 @@
 <template>
   <div class="topNav">
-    <div class="logo" @click="toggleAside">logo</div>
+    <span class="toggleAside" @click="toggleAside"></span>
+    <div class="logo">logo</div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -27,20 +28,50 @@ export default {
   background: rgb(102, 174, 102);
   display: flex;
   padding: 16px;
+  position: relative;
+  z-index: 10;
+  justify-items: center;
+  align-items: center;
 
   >.logo {
     max-width: 6em;
     margin-right: auto;
   }
-}
 
-.menu {
-  display: flex;
-  white-space: nowrap;
-  flex-wrap: nowrap;
+  >.menu {
+    display: flex;
+    white-space: nowrap;
+    flex-wrap: nowrap;
 
-  >li {
-    margin: 0 1em;
+    >li {
+      margin: 0 1em;
+    }
+  }
+
+  >.toggleAside {
+    background: #000;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+  }
+
+  @media(max-width:800px) {
+    >.toggleAside {
+      display: inline-block;
+    }
+
+    >.menu {
+      display: none;
+    }
+
+    >.logo {
+      margin: 0 auto;
+    }
   }
 }
 </style>
