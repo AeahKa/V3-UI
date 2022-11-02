@@ -55,5 +55,12 @@ aside {
       padding: 4px 0;
     }
   }
+
+  @media(max-width:800px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 66px;
+  }
 }
 </style>

@@ -13,7 +13,7 @@ export default {
     TopNav
   },
   setup() {
-    const asideVisible = ref(false)
+    const asideVisible = ref(document.documentElement.clientWidth < 800 ? false : true)
     provide("asideVisible", asideVisible)
   }
 
