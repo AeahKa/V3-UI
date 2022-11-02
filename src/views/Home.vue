@@ -1,19 +1,23 @@
 <template>
-  <div class="banner">
-    <h1>V3-UI</h1>
-    <h2>一个嘴臭的框架</h2>
-    <p class="actions">
-      <a href="">GitHub</a>
-      <RouterLink to="/doc">开始</RouterLink>
-    </p>
-  </div>
+  <Layout>
+    <div class="banner">
+      <h1>V3-UI</h1>
+      <h2>一个嘴臭的框架</h2>
+      <p class="actions">
+        <a href="">GitHub</a>
+        <RouterLink to="/doc">开始</RouterLink>
+      </p>
+    </div>
+  </Layout>
+
 </template>
 
 <script lang="ts">
 import { RouterLink } from 'vue-router';
+import Layout from '../components/Layout.vue';
 
 export default {
-  components: { RouterLink }
+  components: { RouterLink, Layout }
 }
 </script>
 
