@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <TopNav />
+    <TopNav class="nav" />
     <div class="content">
       <slot />
     </div>
@@ -22,5 +22,18 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100vh;
+
+  >.nav {
+    flex-shrink: 0;
+  }
+
+  >.content {
+    flex-grow: 1;
+    padding-left: 156px;
+
+    @media(max-width:800px) {
+      padding-left: 0;
+    }
+  }
 }
 </style>
