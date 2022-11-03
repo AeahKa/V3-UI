@@ -52,6 +52,7 @@ export default {
     width: 150px;
     padding: 16px;
     height: 100vh;
+    z-index: 1;
 
     >h2 {
       margin-top: 4px;
