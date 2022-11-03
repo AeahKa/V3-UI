@@ -45,14 +45,12 @@ $h2: $h - 4px;
   }
 }
 
-
-
 .vSwitch.vChecked {
   background: rgb(0, 215, 0);
-}
 
-.vSwitch.vChecked>span {
-  left: calc(100% - #{$h2} - 2px);
+  >span {
+    left: calc(100% - #{$h2} - 2px);
+  }
 }
 
 .vSwitch:focus {
