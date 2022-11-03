@@ -1,5 +1,5 @@
 <template>
-  <button class="vSwitch" :class="{ 'vChecked': value }" @click="toggle">
+  <button class="v3-switch" :class="{ 'v3-checked': value }" @click="toggle">
     <span></span>
   </button>
 </template>
@@ -25,7 +25,7 @@ $h: 22px;
 
 $h2: $h - 4px;
 
-.vSwitch {
+.v3-switch {
   height: $h;
   width: calc($h * 2);
   border: none;
@@ -45,7 +45,7 @@ $h2: $h - 4px;
   }
 }
 
-.vSwitch.vChecked {
+.v3-switch.v3-checked {
   background: rgb(0, 215, 0);
 
   >span {
@@ -53,7 +53,7 @@ $h2: $h - 4px;
   }
 }
 
-.vSwitch:focus {
+.v3-switch:focus {
   outline: none;
 }
 </style>
