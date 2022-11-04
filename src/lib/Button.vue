@@ -1,5 +1,6 @@
 <template>
-  <button class="v3-button" :class="classes">
+  <button class="v3-button" :class="classes" :disabled="disabled">
+    <span v-if="loading" class="v3-loadingIndicator"></span>
     <slot />
   </button>
 </template>
@@ -20,6 +21,14 @@ export default {
     level: {
       type: String,
       default: "normal"
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    loading: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props) {
@@ -40,10 +49,10 @@ export default {
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
-$blue: #40a9ff;
-$radius: 4px;
-$red: red;
+$mainColor: #07a67e;
+$dangerColor: #cb0100;
 $grey: grey;
+$radius: 4px;
 
 .v3-button {
   box-sizing: border-box;
@@ -66,8 +75,8 @@ $grey: grey;
 
   &:hover,
   &:focus {
-    color: $blue;
-    border-color: $blue;
+    color: $mainColor;
+    border-color: $mainColor;
   }
 
   &:focus {
@@ -92,26 +101,35 @@ $grey: grey;
 
   &.v3-theme-button {
     &.v3-level-main {
-      background: $blue;
+      background: $mainColor;
       color: white;
-      border-color: $blue;
+      border-color: $mainColor;
 
       &:hover,
       &:focus {
-        background: darken($blue, 10%);
-        border-color: darken($blue, 10%);
+        background: darken($mainColor, 10%);
+        border-color: darken($mainColor, 10%);
       }
     }
 
     &.v3-level-danger {
-      background: $red;
-      border-color: $red;
+      background: $dangerColor;
+      border-color: $dangerColor;
       color: white;
 
       &:hover,
       &:focus {
-        background: darken($red, 10%);
-        border-color: darken($red, 10%);
+        background: darken($dangerColor, 10%);
+        border-color: darken($dangerColor, 10%);
+      }
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+
+      &:hover {
+        border-color: $grey;
       }
     }
   }
@@ -119,20 +137,25 @@ $grey: grey;
   &.v3-theme-link {
     border-color: transparent;
     box-shadow: none;
-    color: $blue;
+    color: $mainColor;
 
     &:hover,
     &:focus {
-      color: lighten($blue, 10%);
+      color: lighten($mainColor, 10%);
     }
 
     &.v3-level-danger {
-      color: $red;
+      color: $dangerColor;
 
       &:hover,
       &:focus {
-        color: darken($red, 10%);
+        color: darken($dangerColor, 10%);
       }
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
     }
   }
 
@@ -147,22 +170,49 @@ $grey: grey;
     }
 
     &.v3-level-main {
-      color: $blue;
+      color: $mainColor;
 
       &:hover,
       &:focus {
-        color: darken($blue, 10%);
+        color: darken($mainColor, 10%);
       }
     }
 
     &.v3-level-danger {
-      color: $red;
+      color: $dangerColor;
 
       &:hover,
       &:focus {
-        color: darken($red, 10%);
+        color: darken($dangerColor, 10%);
       }
     }
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    color: $grey;
+  }
+
+  >.v3-loadingIndicator {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 8px;
+    border-color: $mainColor $mainColor $mainColor transparent;
+    border-style: solid;
+    border-width: 2px;
+    animation: v3-spin 1s infinite linear;
+  }
+}
+
+@keyframes v3-spin {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
   }
 }
 </style>
