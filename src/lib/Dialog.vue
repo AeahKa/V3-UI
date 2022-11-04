@@ -1,22 +1,25 @@
 <template>
   <template v-if="visible">
-    <div class="v3-dialog-overlay" @click="onClickOverlay"></div>
-    <div class="v3-dialog-wrapper">
-      <div class="v3-dialog">
-        <header>
-          <slot name="title" />
-          <span @click="close" class="v3-dialog-close">
-          </span>
-        </header>
-        <main>
-          <slot name="content" />
-        </main>
-        <footer>
-          <Button @click="ok">确认</Button>
-          <Button @click="cancel">取消</Button>
-        </footer>
+    <Teleport to="body">
+      <div class="v3-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="v3-dialog-wrapper">
+        <div class="v3-dialog">
+          <header>
+            <slot name="title" />
+            <span @click="close" class="v3-dialog-close">
+            </span>
+          </header>
+          <main>
+            <slot name="content" />
+          </main>
+          <footer>
+            <Button @click="ok">确认</Button>
+            <Button @click="cancel">取消</Button>
+          </footer>
+        </div>
       </div>
-    </div>
+    </Teleport>
+
   </template>
 
 </template>
