@@ -4,13 +4,12 @@
     <div class="v3-dialog-wrapper">
       <div class="v3-dialog">
         <header>
-          标题
+          <slot name="title" />
           <span @click="close" class="v3-dialog-close">
           </span>
         </header>
         <main>
-          <p>第一行</p>
-          <p>第二行</p>
+          <slot name="content" />
         </main>
         <footer>
           <Button @click="ok">确认</Button>
@@ -27,6 +26,10 @@ import Button from './Button.vue';
 export default {
   components: { Button },
   props: {
+    title: {
+      type: String,
+      default: '提示'
+    },
     visible: {
       type: Boolean,
       default: false
