@@ -1,18 +1,38 @@
 <template>
-  <button class="v3-button" :class="`v3-theme-${theme}`">
+  <button class="v3-button" :class="classes">
     <slot />
   </button>
 </template>
 
 <script lang="ts">
+import { computed } from 'Vue'
+
 export default {
   props: {
     theme: {
       type: String,
       default: "button"
+    },
+    size: {
+      type: String,
+      default: "normal"
+    },
+    level: {
+      type: String,
+      default: "normal"
     }
   },
-  inheritAttrs: false
+  setup(props) {
+    const { theme, size, level } = props
+    const classes = computed(() => {
+      return {
+        [`v3-theme-${theme}`]: theme,
+        [`v3-size-${size}`]: size,
+        [`v3-level-${level}`]: level,
+      }
+    })
+    return { classes }
+  }
 }
 </script>
 
@@ -22,6 +42,8 @@ $border-color: #d9d9d9;
 $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
+$red: red;
+$grey: grey;
 
 .v3-button {
   box-sizing: border-box;
@@ -56,6 +78,44 @@ $radius: 4px;
     border: 0;
   }
 
+  &.v3-size-big {
+    font-size: 24px;
+    height: 48px;
+    padding: 0 16px;
+  }
+
+  &.v3-size-small {
+    font-size: 12px;
+    height: 20px;
+    padding: 0 4px;
+  }
+
+  &.v3-theme-button {
+    &.v3-level-main {
+      background: $blue;
+      color: white;
+      border-color: $blue;
+
+      &:hover,
+      &:focus {
+        background: darken($blue, 10%);
+        border-color: darken($blue, 10%);
+      }
+    }
+
+    &.v3-level-danger {
+      background: $red;
+      border-color: $red;
+      color: white;
+
+      &:hover,
+      &:focus {
+        background: darken($red, 10%);
+        border-color: darken($red, 10%);
+      }
+    }
+  }
+
   &.v3-theme-link {
     border-color: transparent;
     box-shadow: none;
@@ -64,6 +124,15 @@ $radius: 4px;
     &:hover,
     &:focus {
       color: lighten($blue, 10%);
+    }
+
+    &.v3-level-danger {
+      color: $red;
+
+      &:hover,
+      &:focus {
+        color: darken($red, 10%);
+      }
     }
   }
 
@@ -75,6 +144,24 @@ $radius: 4px;
     &:hover,
     &:focus {
       color: darken(white, 5%);
+    }
+
+    &.v3-level-main {
+      color: $blue;
+
+      &:hover,
+      &:focus {
+        color: darken($blue, 10%);
+      }
+    }
+
+    &.v3-level-danger {
+      color: $red;
+
+      &:hover,
+      &:focus {
+        color: darken($red, 10%);
+      }
     }
   }
 }
