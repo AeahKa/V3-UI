@@ -10,15 +10,18 @@
       hello
     </template>
   </Dialog>
+  <h1>示例2</h1>
+  <Button @click='showDialog'>show</Button>
 </template>
 
 <script lang="ts">
 import Button from '../../lib/Button.vue';
 import Dialog from '../../lib/Dialog.vue'
+import { setDialog } from '../../lib/setDialog'
 import { ref } from 'Vue';
 export default {
   components: {
-    Dialog, Button
+    Dialog, Button, setDialog
   },
   setup() {
     const visible = ref(false)
@@ -27,7 +30,16 @@ export default {
     }
     const f1 = () => { return false }
     const f2 = () => { return true }
-    return { visible, toggle, f1, f2 }
+    const showDialog = () => {
+      setDialog({
+        title: '标题', content: "hello", ok() {
+          console.log('ok')
+        }, cancel() {
+          console.log('cancel');
+        }
+      })
+    }
+    return { visible, toggle, f1, f2, showDialog }
   }
 }
 </script>
