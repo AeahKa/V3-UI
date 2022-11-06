@@ -47,10 +47,12 @@ export default {
 
 <style lang="scss">
 $h: 32px;
+$green: #07a67e;
+$red: #cb0100;
 $border-color: #d9d9d9;
 $color: #333;
-$mainColor: #07a67e;
-$dangerColor: #cb0100;
+$mainColor: $green;
+$dangerColor: $red;
 $grey: grey;
 $radius: 4px;
 
