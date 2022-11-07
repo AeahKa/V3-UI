@@ -1,11 +1,13 @@
 <template>
   <div class="topNav">
     <span class="toggleAside" @click="toggleAside">
-
+      <svg class="icon">
+        <use xlink:href="#icon-menu"></use>
+      </svg>
     </span>
     <RouterLink to="/" class="logo">
       <svg class="icon">
-        <use xlink:href="#icon-v3-logo-yellow"></use>
+        <use xlink:href="#icon-v3-logo"></use>
       </svg>
     </RouterLink>
     <ul class="menu">
@@ -50,12 +52,14 @@ export default {
   >.logo {
     max-width: 6em;
     margin-right: auto;
-    overflow: auto;
-
+    overflow: visible;
+    height: 32px;
+    width: 32px;
 
     >svg {
-      height: 64px;
-      width: 64px;
+      height: 48px;
+      width: 48px;
+      transform: scaleX(2);
     }
   }
 
@@ -70,15 +74,17 @@ export default {
   }
 
   >.toggleAside {
-    background: #000;
     display: inline-block;
-    width: 24px;
-    height: 24px;
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
     display: none;
+
+    >svg {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   @media(max-width:800px) {
