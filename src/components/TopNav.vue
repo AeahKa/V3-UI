@@ -43,7 +43,7 @@ export default {
 .topNav {
   color: #3b8674;
   display: flex;
-  padding: 4px 16px;
+  padding: 8px 16px;
   position: relative;
   z-index: 10;
   justify-items: center;

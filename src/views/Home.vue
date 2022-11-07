@@ -59,7 +59,7 @@ $border-radius: 4px;
 }
 
 .banner {
-  padding: 100px 0;
+  padding: 180px 0;
   color: #3b8674;
   display: flex;
   justify-content: center;
