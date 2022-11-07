@@ -11,18 +11,17 @@
           </p>
         </div>
       </div>
-      <div class="features">
-        <svg class="icon">
-          <use xlink:href="#icon-Vue"></use>
-        </svg><svg class="icon">
-          <use xlink:href="#icon-typescript"></use>
-        </svg><svg class="icon">
-          <use xlink:href="#icon-light"></use>
-        </svg>
-      </div>
     </Layout>
   </div>
-
+  <div class="features">
+    <svg class="icon">
+      <use xlink:href="#icon-Vue"></use>
+    </svg><svg class="icon">
+      <use xlink:href="#icon-typescript"></use>
+    </svg><svg class="icon">
+      <use xlink:href="#icon-light"></use>
+    </svg>
+  </div>
 </template>
 
 <script lang="ts">
@@ -40,10 +39,11 @@ $border-radius: 4px;
 
 .page {
   background: linear-gradient(145deg, rgba(200, 200, 200, 1) 0%, rgba(236, 236, 236, 1) 25%, rgba(209, 247, 237, 1) 100%);
+  clip-path: ellipse(80% 60% at 50% 40%);
 }
 
 .banner {
-  border: 1px solid red;
+  padding: 100px 0;
   color: #3b8674;
   display: flex;
   justify-content: center;
