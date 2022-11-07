@@ -1,20 +1,24 @@
 <template>
   <div class="topNav">
-    <span class="toggleAside" @click="toggleAside"></span>
+    <span class="toggleAside" @click="toggleAside">
+
+    </span>
     <RouterLink to="/" class="logo">
       <svg class="icon">
         <use xlink:href="#icon-v3-logo-yellow"></use>
       </svg>
     </RouterLink>
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li>
+        <RouterLink to="/doc">文档</RouterLink>
+      </li>
     </ul>
   </div>
 </template>
 
 <script lang="ts">
-import { inject, Ref } from 'vue';
+import { inject, Ref, onMounted, toRaw, ref } from 'vue';
+import { RouterLink, useRouter } from 'vue-router';
 
 export default {
   setup() {
@@ -22,6 +26,12 @@ export default {
     const toggleAside = () => {
       asideVisible.value = !asideVisible.value
     }
+    const router = useRouter()
+    onMounted(() => {
+      if ((toRaw(router).currentRoute.value.fullPath) === '/') {
+        document.querySelector('span').style.display = 'none'
+      }
+    })
     return { toggleAside }
   }
 }
