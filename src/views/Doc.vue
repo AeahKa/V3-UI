@@ -64,6 +64,10 @@ export default {
     background: lightblue;
     width: 150px;
     padding: 16px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
     z-index: 1;
     height: 100%;
     flex-shrink: 0;
