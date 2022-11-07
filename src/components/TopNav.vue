@@ -1,7 +1,10 @@
 <template>
   <div class="topNav">
     <span class="toggleAside" @click="toggleAside"></span>
-    <RouterLink to="/" class="logo">logo
+    <RouterLink to="/" class="logo">
+      <svg class="icon">
+        <use xlink:href="#icon-v3-logo-yellow"></use>
+      </svg>
     </RouterLink>
     <ul class="menu">
       <li>菜单1</li>
@@ -26,9 +29,9 @@ export default {
 
 <style lang="scss" scoped>
 .topNav {
-  background: rgb(102, 174, 102);
+  color: #3b8674;
   display: flex;
-  padding: 16px;
+  padding: 4px 16px;
   position: relative;
   z-index: 10;
   justify-items: center;
@@ -37,6 +40,13 @@ export default {
   >.logo {
     max-width: 6em;
     margin-right: auto;
+    overflow: auto;
+
+
+    >svg {
+      height: 64px;
+      width: 64px;
+    }
   }
 
   >.menu {
@@ -74,5 +84,13 @@ export default {
       margin: 0 auto;
     }
   }
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
 }
 </style>

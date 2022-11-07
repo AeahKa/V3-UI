@@ -1,17 +1,27 @@
 <template>
-  <Layout>
-    <div class="home">
-      <div class="banner">
-        <h1>V3-UI</h1>
-        <h2>一个嘴臭的框架</h2>
-        <p class="actions">
-          <a href="">GitHub</a>
-          <RouterLink to="/doc">开始</RouterLink>
-        </p>
+  <div class="page">
+    <Layout>
+      <div class="home">
+        <div class="banner">
+          <h1>V3-UI</h1>
+          <h2>一个嘴臭的框架</h2>
+          <p class="actions">
+            <a href="">GitHub</a>
+            <RouterLink to="/doc">开始</RouterLink>
+          </p>
+        </div>
       </div>
-    </div>
-
-  </Layout>
+      <div class="features">
+        <svg class="icon">
+          <use xlink:href="#icon-Vue"></use>
+        </svg><svg class="icon">
+          <use xlink:href="#icon-typescript"></use>
+        </svg><svg class="icon">
+          <use xlink:href="#icon-light"></use>
+        </svg>
+      </div>
+    </Layout>
+  </div>
 
 </template>
 
@@ -25,26 +35,43 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$green: #07a67e;
+$border-radius: 4px;
+
+.page {
+  background: linear-gradient(145deg, rgba(200, 200, 200, 1) 0%, rgba(236, 236, 236, 1) 25%, rgba(209, 247, 237, 1) 100%);
+}
+
 .banner {
+  border: 1px solid red;
+  color: #3b8674;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: lightgreen;
 
   >.actions {
     padding: 8px 0;
 
     a {
       margin: 0 8px;
-      background: #fff;
+      background: $green;
+      color: white;
       display: inline-block;
-      $h: 28px;
-      height: $h;
-      line-height: $h;
-      border-radius: calc($h/2);
-      padding: 0 8px;
+      border-radius: $border-radius;
+      padding: 8px 24px;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
+  }
+}
+
+.features {
+  >svg {
+    width: 64px;
+    height: 64px;
   }
 }
 </style>
