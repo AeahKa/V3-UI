@@ -58,22 +58,31 @@ export default {
 <style lang="scss" scoped>
 .content {
   display: flex;
+  flex-grow: 1;
 
   >aside {
     background: lightblue;
     width: 150px;
-    padding: 16px;
-    height: 100vh;
+    padding: 16px 0;
     z-index: 1;
+    height: 100%;
+    flex-shrink: 0;
 
     >h2 {
       margin-top: 4px;
-
+      padding: 0 16px;
     }
 
     >ol {
       >li {
-        padding: 4px 0;
+        >a {
+          display: block;
+          padding: 4px 16px;
+        }
+
+        .router-link-active {
+          background: white;
+        }
       }
     }
 
