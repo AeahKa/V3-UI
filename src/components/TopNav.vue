@@ -7,7 +7,7 @@
     </span>
     <RouterLink to="/" class="logo">
       <svg class="icon">
-        <use xlink:href="#icon-v3-logo"></use>
+        <use xlink:href="#icon-v3"></use>
       </svg>
     </RouterLink>
     <ul class="menu">
@@ -57,9 +57,8 @@ export default {
     width: 32px;
 
     >svg {
-      height: 48px;
-      width: 48px;
-      transform: scaleX(2);
+      height: 32px;
+      width: 32px;
     }
   }
 
