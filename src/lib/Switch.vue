@@ -22,8 +22,8 @@ export default {
 
 <style lang="scss">
 $h: 22px;
-
 $h2: $h - 4px;
+$green: #07a67e;
 
 .v3-switch {
   height: $h;
@@ -46,7 +46,7 @@ $h2: $h - 4px;
 }
 
 .v3-switch.v3-checked {
-  background: rgb(0, 215, 0);
+  background: $green;
 
   >span {
     left: calc(100% - #{$h2} - 2px);
