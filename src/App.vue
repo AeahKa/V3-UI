@@ -9,10 +9,10 @@ export default {
   name: 'App',
 
   setup() {
-    const asideVisible = ref(document.documentElement.clientWidth <= 800 ? false : true)
+    const asideVisible = ref(document.documentElement.clientWidth <= 500 ? false : true)
     provide("asideVisible", asideVisible)
     router.afterEach(() => {
-      if (document.documentElement.clientWidth <= 800) {
+      if (document.documentElement.clientWidth <= 500) {
         asideVisible.value = false
       }
     })

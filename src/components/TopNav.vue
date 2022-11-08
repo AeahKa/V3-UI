@@ -86,7 +86,7 @@ export default {
     }
   }
 
-  @media(max-width:800px) {
+  @media(max-width:500px) {
     >.toggleAside {
       display: inline-block;
     }
