@@ -59,6 +59,11 @@ export default {
 .content {
   display: flex;
   flex-grow: 1;
+  padding-left: 156px;
+
+  @media (max-width: 500px) {
+    padding-left: 0;
+  }
 
   >aside {
     background: lightblue;
@@ -82,6 +87,7 @@ export default {
         >a {
           display: block;
           padding: 4px 16px;
+          text-decoration: none;
         }
 
         .router-link-active {
@@ -99,7 +105,9 @@ export default {
   }
 
   >main {
+    flex-grow: 1;
     padding: 16px;
+    background: white;
   }
 }
 </style>
