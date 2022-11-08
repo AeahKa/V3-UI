@@ -95,13 +95,6 @@ export default {
         }
       }
     }
-
-    // @media(max-width:500px) {
-    //   position: fixed;
-    //   top: 0;
-    //   left: 0;
-    //   padding-top: 66px;
-    // }
   }
 
   >main {
