@@ -43,6 +43,19 @@ $green: #07a67e;
     border-radius: calc($h2 / 2);
     transition: left 250ms;
   }
+
+  &:active {
+    >span {
+      width: $h2+4px;
+    }
+  }
+
+  &.v3-checked:active {
+    >span {
+      width: $h2+4px;
+      margin-left: -4px;
+    }
+  }
 }
 
 .v3-switch.v3-checked {
