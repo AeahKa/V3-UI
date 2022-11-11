@@ -57,8 +57,8 @@ export default {
 
 <style lang="scss" scoped>
 .content {
-  display: flex;
   flex-grow: 1;
+  display: flex;
   padding-left: 156px;
 
   @media (max-width: 500px) {
@@ -98,9 +98,10 @@ export default {
   }
 
   >main {
-    flex-grow: 1;
+    overflow: auto;
     padding: 16px;
     background: white;
+    width: 100%;
   }
 }
 </style>
