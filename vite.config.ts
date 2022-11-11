@@ -1,7 +1,6 @@
 // @ts-nocheck
 import fs from 'fs'
 import { baseParse } from '@vue/compiler-core'
-import { marked } from 'marked'
 
 export default {
 	vueCustomBlockTransforms: {
