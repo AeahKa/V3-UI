@@ -1,3 +1,7 @@
+<demo>
+  支持disabled
+</demo>
+
 <template>
   <Switch v-model:value='checked' disabled />
 </template>
@@ -8,7 +12,7 @@ import { ref } from 'vue';
 export default {
   components: { Switch },
   setup() {
-    const checked = ref(true)
+    const checked = ref(false)
     return { checked }
   }
 }

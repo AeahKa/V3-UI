@@ -10,7 +10,7 @@
         <Button>查看代码</Button>
       </div>
       <div class="demo-code">
-        <pre>&lt;Switch v-model:value="checked" /&gt;</pre>
+        <pre>{{ Demo1.__sourceCode }}</pre>
       </div>
     </div>
     <div class="demo">
@@ -22,7 +22,7 @@
         <Button>查看代码</Button>
       </div>
       <div class="demo-code">
-        <pre>&lt;Switch v-model:value="checked" disabled /&gt;</pre>
+        <pre>{{ Demo2.__sourceCode }}</pre>
       </div>
     </div>
   </div>
@@ -35,6 +35,11 @@ import Demo1 from './Switch1-demo.vue'
 import Demo2 from './Switch2-demo.vue'
 export default {
   components: { Switch, Button, Demo1, Demo2 },
+  setup() {
+    return {
+      Demo1, Demo2
+    }
+  }
 }
 </script>
 

@@ -1,3 +1,7 @@
+<demo>
+  常规用法
+</demo>
+
 <template>
   <Switch v-model:value='checked' />
 </template>
@@ -8,7 +12,7 @@ import { ref } from 'vue';
 export default {
   components: { Switch },
   setup() {
-    const checked = ref(true)
+    const checked = ref(false)
     return { checked }
   }
 }
