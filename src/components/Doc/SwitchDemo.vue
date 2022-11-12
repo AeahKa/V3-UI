@@ -3,7 +3,6 @@
     <h1>Switch 组件示例 </h1>
     <Demo :component="Switch1Demo"></Demo>
     <Demo :component="Switch2Demo"></Demo>
-
   </div>
 </template>
 

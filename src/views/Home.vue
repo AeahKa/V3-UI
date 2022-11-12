@@ -4,7 +4,7 @@
       <div class="home">
         <div class="banner">
           <h1>V3-UI</h1>
-          <h2>一个嘴臭的框架</h2>
+          <h2>一个纯手工无添加框架</h2>
           <p class="actions">
             <a href="">GitHub</a>
             <RouterLink to="/doc">开始</RouterLink>

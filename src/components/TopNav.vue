@@ -12,7 +12,7 @@
     </RouterLink>
     <ul class="menu">
       <li>
-        <RouterLink to="/doc">文档</RouterLink>
+        <RouterLink to="/doc/intro">文档</RouterLink>
       </li>
     </ul>
   </div>
@@ -41,7 +41,7 @@ export default {
 
 <style lang="scss" scoped>
 .topNav {
-  color: #3b8674;
+  color: grey;
   display: flex;
   padding: 8px 16px;
   position: relative;
@@ -59,6 +59,7 @@ export default {
     >svg {
       height: 32px;
       width: 32px;
+      fill: rgb(255, 234, 0);
     }
   }
 
