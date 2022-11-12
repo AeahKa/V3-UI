@@ -54,7 +54,7 @@ $green: #07a67e;
 $border-radius: 4px;
 
 .page {
-  background: linear-gradient(145deg, rgba(200, 200, 200, 1) 0%, rgba(236, 236, 236, 1) 25%, rgba(209, 247, 237, 1) 100%);
+  background: linear-gradient(145deg, rgba(213, 213, 213, 1) 0%, rgba(210, 255, 243, 1) 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
 }
 
