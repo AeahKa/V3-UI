@@ -10,9 +10,6 @@ import { inject, ref } from 'vue';
               <RouterLink to="/doc/intro">介绍</RouterLink>
             </li>
             <li>
-              <RouterLink to="/doc/install">安装</RouterLink>
-            </li>
-            <li>
               <RouterLink to="/doc/start">开始使用</RouterLink>
             </li>
           </ol>
