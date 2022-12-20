@@ -6,7 +6,7 @@
           <h1>V3-UI</h1>
           <h2>一个纯手工无添加框架</h2>
           <p class="actions">
-            <a href="">GitHub</a>
+            <a href="https://github.com/AeahKa/V3-UI">GitHub</a>
             <RouterLink to="/doc">开始</RouterLink>
           </p>
         </div>
